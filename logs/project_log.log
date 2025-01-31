@@ -25327,3 +25327,9 @@ tamp': '2025-01-31T02:56:02.091723', 'temperature': 136.4}
 2025-01-30 20:56:35.697 | INFO     | __main__:process_message:95 - Message received from author: Alice
 2025-01-30 20:56:35.698 | INFO     | __main__:process_message:101 - Updated author counts: {'Eve': 1056, 'Alice': 1495, 'Charlie': 940, 'Diana': 1689, 'Bob': 1066}
 2025-01-30 20:56:35.695 | INFO     | __main__:main:170 - Sent message to topic 'buzzline_json': {'message': 'Kafka is awesome.', 'author': 'Alice'}
+2025-01-30 20:59:56.701 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-01-30 20:59:56.706 | INFO     | __main__:<module>:68 - Project root: C:\Users\cerad\OneDrive\Desktop\Streaming Data\Module 3\buzzline-03-drake
+2025-01-30 20:59:56.706 | INFO     | __main__:<module>:72 - Data folder: C:\Users\cerad\OneDrive\Desktop\Streaming Data\Module 3\buzzline-03-drake\data
+2025-01-30 20:59:56.707 | INFO     | __main__:<module>:76 - Data file: C:\Users\cerad\OneDrive\Desktop\Streaming Data\Module 3\buzzline-03-drake\data\buzz.json
+2025-01-30 20:59:56.707 | INFO     | __main__:main:136 - START producer.
+2025-01-30 20:59:56.708 | INFO     | utils.utils_producer:get_zookeeper_address:57 - Zookeeper address: localhost:2181
