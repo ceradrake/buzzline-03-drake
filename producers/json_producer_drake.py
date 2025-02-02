@@ -21,6 +21,7 @@ import sys
 import time
 import pathlib  # work with file paths
 import json  # work with JSON data
+import datetime
 
 # Import external packages
 from dotenv import load_dotenv
@@ -106,6 +107,7 @@ def generate_messages(file_path: pathlib.Path):
 
                 # Iterate over the entries in the JSON file
                 for buzz_entry in json_data:
+                    buzz_entry["timestamp"] = datetime.datetime.utcnow().isoformat()
                     logger.debug(f"Generated JSON: {buzz_entry}")
                     yield buzz_entry
         except FileNotFoundError:
