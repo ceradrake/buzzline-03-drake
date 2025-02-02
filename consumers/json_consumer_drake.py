@@ -99,6 +99,9 @@ def process_message(message: str) -> None:
             # Increment the count for the author
             author_counts[author] += 1
 
+            text = message_dict.get("message", "").lower()
+            words = text.split()
+
             # Increment the count for the words
             for word in words: 
                 word_counts[word] += 1
