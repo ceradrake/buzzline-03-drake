@@ -66,7 +66,7 @@ def get_kafka_consumer_group_id() -> int:
 # to ensure counts are integers
 # {author: count} author is the key and count is the value
 author_counts = defaultdict(int)
-
+word_counts = defaultdict(int)
 
 #####################################
 # Function to process a single message
@@ -99,8 +99,13 @@ def process_message(message: str) -> None:
             # Increment the count for the author
             author_counts[author] += 1
 
+            # Increment the count for the words
+            for word in words: 
+                word_counts[word] += 1
+
             # Log the updated counts
             logger.info(f"Updated author counts: {dict(author_counts)}")
+            logger.info(f"Updated word counts: {dict(sorted(word_counts.items(), key=lambda x: x[1], reverse=True)[:10])}")
         else:
             logger.error(f"Expected a dictionary but got: {type(message_dict)}")
 
