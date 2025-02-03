@@ -105,7 +105,7 @@ def generate_messages(file_path: pathlib.Path):
                         continue
 
                     # Generate a timestamp and prepare the message
-                    current_timestamp = datetime.utcnow().isoformat()
+                    current_timestamp = datetime.now(local_tz).isoformat()
                     message = {
                         "timestamp": current_timestamp,
                         "temperature": float(row["temperature"]),
