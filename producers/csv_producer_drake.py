@@ -19,6 +19,9 @@ import pathlib  # work with file paths
 import csv  # handle CSV data
 import json  # work with JSON data
 from datetime import datetime  # work with timestamps
+import pytz
+
+local_tz = pytz.timezone("Central Standard")
 
 # Import external packages
 from dotenv import load_dotenv
