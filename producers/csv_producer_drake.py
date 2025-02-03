@@ -21,7 +21,7 @@ import json  # work with JSON data
 from datetime import datetime  # work with timestamps
 import pytz
 
-local_tz = pytz.timezone("Central Standard")
+local_tz = pytz.timezone("America/Chicago")
 
 # Import external packages
 from dotenv import load_dotenv
